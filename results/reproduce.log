@@ -1,0 +1,31 @@
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :processResources NO-SOURCE
+> Task :compileKotlin
+> Task :compileJava NO-SOURCE
+> Task :classes UP-TO-DATE
+
+> Task :reproduce FAILED
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[otel.javaagent 2026-11-06 11:30:09:655 +0100] [main] INFO io.opentelemetry.javaagent.tooling.VersionLogger - opentelemetry-javaagent - version: 2.33.1
+LEAK after callback: traceId=30103e30f3bb5d3316e4238a59a6f1a5 spanId=762d48bbb760c188
+LEAK after callback: traceId=30103e30f3bb5d3316e4238a59a6f1a5 spanId=762d48bbb760c188
+LEAK after callback: traceId=30103e30f3bb5d3316e4238a59a6f1a5 spanId=762d48bbb760c188
+RESULT completed=3 leakedCallbacks=9 distinctRequestTraces=1
+Exception in thread "main" java.lang.IllegalStateException: A request span remained current after callback completion
+	at MainKt.main(Main.kt:85)
+	at MainKt.main(Main.kt)
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':reproduce'.
+> Process 'command '<JDK_21>/bin/java'' finished with non-zero exit value 1
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 2s
+2 actionable tasks: 2 executed
